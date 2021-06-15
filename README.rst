@@ -2,4 +2,4 @@
 trans2arche
 ============
 
-Utilty functions to work with TEI Documents
+Scripts and utitlity functions to ingest Transkribus Data into ARCHE
