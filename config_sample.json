@@ -1,7 +1,8 @@
 {
+    "col_id": "51052",
     "col_dir": "/home/csae8092/Desktop/trnskrbs_51052",
     "col_title": "Die Große Transformation Transkribus Export",
-    "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans/",
+    "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans",
     "arche_base_lang": "de",
     "arche_extend_pattern": "{} Seiten",
     "mapping": {
@@ -11,5 +12,16 @@
         "hasExtend": "nrOfPages",
         "hasUrl": "url",
         "hasAlternativTitle": "title"
+    },
+    "constants": {
+        "hasContact": "https://id.acdh.oeaw.ac.at/acdh",
+        "hasOwner": "https://d-nb.info/gnd/2060831-7",
+        "hasRightsHolder": "https://d-nb.info/gnd/2060831-7",
+        "hasLicensor": "https://d-nb.info/gnd/2060831-7",
+        "hasLicense": "https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-nc-4-0",
+        "hasCreator": "https://id.acdh.oeaw.ac.at/vhelfert",
+        "hasContributor": "https://d-nb.info/gnd/1043833846",
+        "hasMetadataCreator": "https://d-nb.info/gnd/1043833846",
+        "hasDepositor": "https://d-nb.info/gnd/1043833846"
     }
 }

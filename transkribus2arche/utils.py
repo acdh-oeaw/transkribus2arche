@@ -1,6 +1,9 @@
 import glob
 import json
 from datetime import datetime
+from rdflib import Graph, URIRef, Literal, XSD, RDF
+
+from .config import ACDH_NS
 
 def read_json(path_to_file):
     with open(path_to_file) as f:
@@ -32,4 +35,29 @@ def get_md_dict(trans_doc, path_to_config):
         if not obj:
             continue
         item[key] = f"{obj}"
+        item['hasIdentifier'] = f"{config['arche_base_url']}/{config['col_id']}/{md['docId']}"
+        item['isPartOf'] = f"{config['arche_base_url']}x"
     return item
+
+
+def make_rdf(path_to_config, path_to_additional_md):
+    g = Graph()
+    g.parse(path_to_additional_md, format="ttl")
+    for x in list_docs(path_to_config):
+        item = get_md_dict(x, path_to_config)
+        sub = URIRef(item['hasIdentifier'])
+        col_g = Graph()
+        col_g.add(
+            (sub, RDF.type, ACDH_NS.Collection)
+        )
+        for key, value in item.items():
+            if "Date" in key:
+                col_g.add(
+                    (sub, ACDH_NS[key], Literal(value, datatype=XSD.date))
+                )
+            else:
+                col_g.add(
+                    (sub, ACDH_NS[key], Literal(value))
+                )
+        g = g + col_g
+    return g
