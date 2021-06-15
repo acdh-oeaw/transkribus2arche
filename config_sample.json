@@ -1,0 +1,15 @@
+{
+    "col_dir": "/home/csae8092/Desktop/trnskrbs_51052",
+    "col_title": "Die Große Transformation Transkribus Export",
+    "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans/",
+    "arche_base_lang": "de",
+    "arche_extend_pattern": "{} Seiten",
+    "mapping": {
+        "hasTitle": "authority",
+        "hasCoverageStartDate": "createdFromTimestamp",
+        "hasCoverageEndDate": "createdFromTimestamp",
+        "hasExtend": "nrOfPages",
+        "hasUrl": "url",
+        "hasAlternativTitle": "title"
+    }
+}
