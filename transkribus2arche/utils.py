@@ -36,14 +36,14 @@ def get_md_dict(trans_doc, path_to_config):
             continue
         item[key] = f"{obj}"
         item['hasIdentifier'] = f"{config['arche_base_url']}/{config['col_id']}/{md['docId']}"
-        item['isPartOf'] = f"{config['arche_base_url']}"
     return item
 
 
 def make_rdf(path_to_config, path_to_additional_md):
     g = Graph()
     g.parse(path_to_additional_md, format="ttl")
-    constants = read_json(path_to_config)['constants_uris']
+    config = read_json(path_to_config)
+    constants = config['constants_uris']
     for x in list_docs(path_to_config):
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
@@ -51,14 +51,20 @@ def make_rdf(path_to_config, path_to_additional_md):
         col_g.add(
             (sub, RDF.type, ACDH_NS.Collection)
         )
+        col_g.add(
+            (sub, ACDH_NS.isPartOf, URIRef(
+                f"{config['arche_base_url']}"
+            ))
+        )
+        col_g.add(
+            (sub, ACDH_NS.hasTitle, Literal(
+                item['hasTitle'], lang=config['arche_base_lang']
+            ))
+        )
         for key, value in item.items():
             if "Date" in key:
                 col_g.add(
                     (sub, ACDH_NS[key], Literal(value, datatype=XSD.date))
-                )
-            else:
-                col_g.add(
-                    (sub, ACDH_NS[key], Literal(value))
                 )
         g = g + col_g
         trp = read_json(x)['pageList']['pages']
