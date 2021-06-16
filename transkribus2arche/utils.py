@@ -36,13 +36,14 @@ def get_md_dict(trans_doc, path_to_config):
             continue
         item[key] = f"{obj}"
         item['hasIdentifier'] = f"{config['arche_base_url']}/{config['col_id']}/{md['docId']}"
-        item['isPartOf'] = f"{config['arche_base_url']}x"
+        item['isPartOf'] = f"{config['arche_base_url']}"
     return item
 
 
 def make_rdf(path_to_config, path_to_additional_md):
     g = Graph()
     g.parse(path_to_additional_md, format="ttl")
+    constants = read_json(path_to_config)['constants_uris']
     for x in list_docs(path_to_config):
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
@@ -92,6 +93,11 @@ def make_rdf(path_to_config, path_to_additional_md):
                         )
                 )
             g = g + p_g
+        for sub in g.subjects():
+            for trpl in constants:
+                g.add(
+                    (sub, ACDH_NS[trpl[0]], URIRef(trpl[1]))
+                )
     return g
 
 
