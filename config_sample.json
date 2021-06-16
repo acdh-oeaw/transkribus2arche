@@ -5,6 +5,7 @@
     "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans",
     "arche_base_lang": "de",
     "arche_extend_pattern": "{} Seiten",
+    "img_xml_pattern": [".JPG", ".pxml"],
     "mapping": {
         "hasTitle": "authority",
         "hasCoverageStartDate": "createdFromTimestamp",
@@ -34,7 +35,7 @@
             ["hasDigitisingAgent", "https://d-nb.info/gnd/1043833846", "uri"],
             [
                 "hasSchema",
-                "http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd", "uri"
+                "http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd", "literal_as_uri"
             ],
             ["hasCategory", "https://vocabs.acdh.oeaw.ac.at/archecategory/dataset", "uri"]
         ]
