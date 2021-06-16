@@ -56,6 +56,7 @@ def add_triple(g, sub, triple):
         )
     return g
 
+
 def read_json(path_to_file):
     with open(path_to_file) as f:
         data = json.load(f)
@@ -83,16 +84,12 @@ def get_md_dict(trans_doc, path_to_config):
                 obj = datetime.fromtimestamp(obj / 1000)  
         if 'hasExtend' in key:
             obj = config['arche_extend_pattern'].format(obj)
-        if not obj:
-            continue
         item[key] = f"{obj}"
         item['hasIdentifier'] = f"{config['arche_base_url']}/{config['col_id']}/{md['docId']}"
     return item
 
 
-def make_rdf(path_to_config, path_to_additional_md):
-    g = Graph()
-    g.parse(path_to_additional_md, format="ttl")
+def make_rdf(path_to_config):
     config = read_json(path_to_config)
     global_constants = config['global_constants']
     img_constants = config['img_constants']
@@ -100,6 +97,11 @@ def make_rdf(path_to_config, path_to_additional_md):
     base_lang = config['arche_base_lang']
     base_url = config['arche_base_url']
     replace_pattern = config['img_xml_pattern']
+    g = Graph()
+    g.parse(config['additional_md'], format="ttl")
+    top_col_sub = URIRef(config['arche_base_url'])
+    for triple in global_constants:
+        add_triple(g, top_col_sub, triple)
     for x in list_docs(path_to_config)[:2]:
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
@@ -165,15 +167,16 @@ def make_rdf(path_to_config, path_to_additional_md):
             p_g.add(
                 (p_subj, ACDH_NS.isSourceOf, xml_subj)
             )
-            for d in ['height', 'width']:
-                p_g.add(
-                    (
-                        p_subj,
-                        ACDH_NS.hasExtent,
-                        Literal(
-                            f"{d}: {p[d]}", lang="und")
-                        )
+            p_g.add(
+                (
+                    p_subj,
+                    ACDH_NS.hasExtent,
+                    Literal(
+                        f"height: {p['height']}; width: {p['width']}",
+                        lang="en"
+                    )
                 )
+            )
             for d in ['key', 'pageId', 'pageNr', 'docId']:
                 p_g.add(
                     (
@@ -188,7 +191,7 @@ def make_rdf(path_to_config, path_to_additional_md):
     return g
 
 
-def serialize_md(path_to_config, path_to_additional_md, format='turtle', filename="out.ttl"):
-    g = make_rdf(path_to_config, path_to_additional_md)
+def serialize_md(path_to_config, format='turtle', filename="out.ttl"):
+    g = make_rdf(path_to_config)
     with open(filename, 'w') as f:
         print(g.serialize(format='ttl').decode('UTF-8'), file=f)

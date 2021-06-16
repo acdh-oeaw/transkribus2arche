@@ -1,6 +1,7 @@
 {
     "col_id": "51052",
     "col_dir": "/home/csae8092/Desktop/trnskrbs_51052",
+    "additional_md": "/home/csae8092/repos/packages/transkribus2arche/additional_md.ttl",
     "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans",
     "arche_base_lang": "de",
     "arche_extend_pattern": "{} Seiten",
@@ -15,8 +16,10 @@
     },
     "global_constants": [
         ["hasContact", "https://id.acdh.oeaw.ac.at/acdh", "uri"],
+        ["hasSubject", "Transkribus", "literal", "und"],
         ["hasOwner", "https://d-nb.info/gnd/2060831-7", "uri"],
         ["hasMetadataCreator", "https://d-nb.info/gnd/1043833846", "uri"],
+        ["hasCurator", "https://d-nb.info/gnd/1043833846", "uri"],
         ["hasDepositor", "https://d-nb.info/gnd/1043833846", "uri"],
         ["hasRightsHolder", "https://d-nb.info/gnd/2060831-7", "uri"],
         ["hasLicensor", "https://d-nb.info/gnd/2060831-7", "uri"],
