@@ -60,4 +60,42 @@ def make_rdf(path_to_config, path_to_additional_md):
                     (sub, ACDH_NS[key], Literal(value))
                 )
         g = g + col_g
+        trp = read_json(x)['pageList']['pages']
+        for p in trp:
+            p_subj = URIRef(f"{item['hasIdentifier']}/{p['imgFileName']}")
+            p_g = Graph()
+            p_g.add(
+                (p_subj, RDF.type, ACDH_NS.Image)
+            )
+            p_g.add(
+                (p_subj, ACDH_NS.isPartOf, sub)
+            )
+            p_g.add(
+                (p_subj, ACDH_NS.hasTitle, Literal(p['imgFileName'], lang="und"))
+            )
+            for d in ['height', 'width']:
+                p_g.add(
+                    (
+                        p_subj,
+                        ACDH_NS.hasExtent,
+                        Literal(
+                            f"{d}: {p[d]}", lang="und")
+                        )
+                )
+            for d in ['key', 'pageId', 'pageNr', 'docId']:
+                p_g.add(
+                    (
+                        p_subj,
+                        ACDH_NS.hasNonLinkedIdentifier,
+                        Literal(
+                            f"{d}: {p[d]}", lang="und")
+                        )
+                )
+            g = g + p_g
     return g
+
+
+def serialize_md(path_to_config, path_to_additional_md, format='turtle', filename="out.ttl"):
+    g = make_rdf(path_to_config, path_to_additional_md)
+    with open(filename, 'w') as f:
+        print(g.serialize(format='ttl').decode('UTF-8'), file=f)
