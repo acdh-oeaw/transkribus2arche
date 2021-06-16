@@ -13,15 +13,29 @@
         "hasUrl": "url",
         "hasAlternativTitle": "title"
     },
-    "constants_uris": [
-        ["hasContact", "https://id.acdh.oeaw.ac.at/acdh"],
-        ["hasOwner", "https://d-nb.info/gnd/2060831-7"],
-        ["hasRightsHolder", "https://d-nb.info/gnd/2060831-7"],
-        ["hasLicensor", "https://d-nb.info/gnd/2060831-7"],
-        ["hasLicense", "https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-nc-4-0"],
-        ["hasCreator", "https://id.acdh.oeaw.ac.at/vhelfert"],
-        ["hasContributor", "https://d-nb.info/gnd/1043833846"],
-        ["hasMetadataCreator", "https://d-nb.info/gnd/1043833846"],
-        ["hasDepositor", "https://d-nb.info/gnd/1043833846"]
-    ]
+    "global_constants": [
+        ["hasContact", "https://id.acdh.oeaw.ac.at/acdh", "uri"],
+        ["hasOwner", "https://d-nb.info/gnd/2060831-7", "uri"],
+        ["hasMetadataCreator", "https://d-nb.info/gnd/1043833846", "uri"],
+        ["hasDepositor", "https://d-nb.info/gnd/1043833846", "uri"],
+        ["hasRightsHolder", "https://d-nb.info/gnd/2060831-7", "uri"],
+        ["hasLicensor", "https://d-nb.info/gnd/2060831-7", "uri"],
+        ["hasLicense", "https://vocabs.acdh.oeaw.ac.at/archelicenses/cc-by-nc-4-0", "uri"],
+        ["hasContributor", "https://d-nb.info/gnd/1043833846", "uri"]        
+    ],
+    "img_constants":
+        [
+            ["hasFormat", "image/jpeg", "literal_no_lang"],
+            ["hasDigitisingAgent", "https://id.acdh.oeaw.ac.at/vhelfert", "uri"]
+        ],
+    "xml_constants":
+        [
+            ["hasFormat", "application/xml", "literal_no_lang"],
+            ["hasDigitisingAgent", "https://d-nb.info/gnd/1043833846", "uri"],
+            [
+                "hasSchema",
+                "http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15/pagecontent.xsd", "uri"
+            ],
+            ["hasCategory", "https://vocabs.acdh.oeaw.ac.at/archecategory/dataset", "uri"]
+        ]
 }

@@ -5,6 +5,49 @@ from rdflib import Graph, URIRef, Literal, XSD, RDF
 
 from .config import ACDH_NS
 
+
+def add_triple(g, sub, triple):
+    tr_type = triple[2]
+    if tr_type == "uri":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                URIRef(triple[1])
+            )
+        )
+    elif tr_type == "literal_no_lang":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(triple[1])
+            )
+        )
+    elif tr_type == "literal":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(
+                    triple[1],
+                    lang=triple[3]
+                )
+            )
+        )
+    elif tr_type == "date":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(
+                    triple[1],
+                    datatype=XSD.date
+                )
+            )
+        )
+    return g
+
 def read_json(path_to_file):
     with open(path_to_file) as f:
         data = json.load(f)
@@ -43,7 +86,9 @@ def make_rdf(path_to_config, path_to_additional_md):
     g = Graph()
     g.parse(path_to_additional_md, format="ttl")
     config = read_json(path_to_config)
-    constants = config['constants_uris']
+    global_constants = config['global_constants']
+    img_constants = config['img_constants']
+    xml_constants = config['xml_constants']
     for x in list_docs(path_to_config):
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
@@ -51,6 +96,8 @@ def make_rdf(path_to_config, path_to_additional_md):
         col_g.add(
             (sub, RDF.type, ACDH_NS.Collection)
         )
+        for triple in global_constants:
+            add_triple(col_g, sub, triple)
         col_g.add(
             (sub, ACDH_NS.isPartOf, URIRef(
                 f"{config['arche_base_url']}"
@@ -69,8 +116,29 @@ def make_rdf(path_to_config, path_to_additional_md):
         g = g + col_g
         trp = read_json(x)['pageList']['pages']
         for p in trp:
+
+            xml_subj = URIRef(f"{item['hasIdentifier']}/{p['imgFileName']}/XML")
+            xml_g = Graph()
+            xml_g.add(
+                (xml_subj, RDF.type, ACDH_NS.Resource)
+            )
+            xml_g.add(
+                (xml_subj, ACDH_NS.isPartOf, sub)
+            )
+            xml_g.add(
+                (xml_subj, ACDH_NS.hasTitle, Literal(f"{p['imgFileName']}XML", lang="und"))
+            )
+            for triple in xml_constants:
+                add_triple(xml_g, xml_subj, triple)
+            for triple in global_constants:
+                add_triple(xml_g, xml_subj, triple)
+
             p_subj = URIRef(f"{item['hasIdentifier']}/{p['imgFileName']}")
             p_g = Graph()
+            for triple in img_constants:
+                add_triple(p_g, p_subj, triple)
+            for triple in global_constants:
+                add_triple(p_g, p_subj, triple)
             p_g.add(
                 (p_subj, RDF.type, ACDH_NS.Image)
             )
@@ -99,11 +167,7 @@ def make_rdf(path_to_config, path_to_additional_md):
                         )
                 )
             g = g + p_g
-        for sub in g.subjects():
-            for trpl in constants:
-                g.add(
-                    (sub, ACDH_NS[trpl[0]], URIRef(trpl[1]))
-                )
+            g = g + xml_g
     return g
 
 
