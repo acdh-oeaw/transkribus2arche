@@ -2,7 +2,9 @@
 @prefix acdhi: <https://id.acdh.oeaw.ac.at/> .
 
 
-<https://id.acdh.oeaw.ac.at/transkribus/gtrans>
-    a acdh:TopCollection ;
+<acdhi:transkribus/gtrans>  a acdh:TopCollection ;
     acdh:hasTitle "Die Große Transformation - Transkribus-Export"@de ;
     acdh:hasDescription "Die vorliegenden Daten wurden mit Transkribus prozessiert und anschließend exportiert"@de .
+
+<acdhi:vhelfert> a acdh:Person ;
+    acdh:hasTitle "Veronika Helfert"@de .
