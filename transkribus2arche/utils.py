@@ -86,6 +86,7 @@ def get_md_dict(trans_doc, path_to_config):
             obj = config['arche_extend_pattern'].format(obj)
         item[key] = f"{obj}"
         item['hasIdentifier'] = f"{config['arche_base_url']}/{config['col_id']}/{md['docId']}"
+        item['docId'] = md['docId']
     return item
 
 
@@ -102,7 +103,7 @@ def make_rdf(path_to_config):
     top_col_sub = URIRef(config['arche_base_url'])
     for triple in global_constants:
         add_triple(g, top_col_sub, triple)
-    for x in list_docs(path_to_config)[:2]:
+    for x in list_docs(path_to_config):
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
         col_g = Graph()
@@ -188,10 +189,6 @@ def make_rdf(path_to_config):
                 )
             g = g + p_g
             g = g + xml_g
+        with open(f"{item['docId']}.tll", 'w') as f:
+            print(g.serialize(format='turtle').decode('UTF-8'), file=f)
     return g
-
-
-def serialize_md(path_to_config, format='turtle', filename="out.ttl"):
-    g = make_rdf(path_to_config)
-    with open(filename, 'w') as f:
-        print(g.serialize(format='ttl').decode('UTF-8'), file=f)

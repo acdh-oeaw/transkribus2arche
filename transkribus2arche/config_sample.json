@@ -1,7 +1,7 @@
 {
     "col_id": "51052",
     "col_dir": "/home/csae8092/Desktop/trnskrbs_51052",
-    "additional_md": "/home/csae8092/repos/packages/transkribus2arche/additional_md.ttl",
+    "additional_md": "./transkribus2arche/additional_md_sample.ttl",
     "arche_base_url": "https://id.acdh.oeaw.ac.at/transkribus/gtrans",
     "arche_base_lang": "de",
     "arche_extend_pattern": "{} Seiten",
