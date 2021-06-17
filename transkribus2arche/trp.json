@@ -1,0 +1,523 @@
+{
+    "collection": {
+      "accountingStatus": 1,
+      "colId": 51052,
+      "colName": "Gro\u00dfe Transformation",
+      "crowdsourcing": false,
+      "description": "Wiener Stadt- und Landesarchiv",
+      "elearning": false,
+      "nrOfDocuments": 0,
+      "pageId": 9991224,
+      "thumbUrl": "https://files.transkribus.eu/Get?id=TWTYFTHLKNZJTFJXQGRWXPJB&fileType=thumb",
+      "url": "https://files.transkribus.eu/Get?id=TWTYFTHLKNZJTFJXQGRWXPJB&fileType=view"
+    },
+    "edDeclList": [],
+    "md": {
+      "authority": "Wiener Stadt- und Landesarchiv, 1.5.3 Magistratsdirektion, Karton: #NR, Aktenzahl: 1691/1919",
+      "collectionList": {
+        "colList": [
+          {
+            "colId": 51052,
+            "colName": "Gro\u00dfe Transformation",
+            "crowdsourcing": false,
+            "description": "Wiener Stadt- und Landesarchiv",
+            "elearning": false,
+            "nrOfDocuments": 0
+          }
+        ]
+      },
+      "createdFromTimestamp": -1604451600000,
+      "createdToTimestamp": -1604451600000,
+      "docId": 230127,
+      "externalId": "2466",
+      "fimgStoreColl": "TrpDoc_DEA_230127",
+      "nrOfDone": 0,
+      "nrOfFinal": 0,
+      "nrOfGT": 0,
+      "nrOfInProgress": 10,
+      "nrOfLines": 284,
+      "nrOfNew": 0,
+      "nrOfPages": 10,
+      "nrOfRegions": 13,
+      "nrOfTranscribedLines": 259,
+      "nrOfTranscribedRegions": 12,
+      "nrOfTranscribedWords": 0,
+      "nrOfWords": 0,
+      "nrOfWordsInLines": 1290,
+      "nrOfWordsInRegions": 1059,
+      "origDocId": 0,
+      "pageId": 9991226,
+      "scriptType": "NORMAL",
+      "status": 0,
+      "thumbUrl": "https://files.transkribus.eu/Get?id=KXTNELHGTLMMLJXOPEGLRAKL&fileType=thumb",
+      "title": "Pensionierungen, Anfragen des GR Rummelhardt",
+      "uploadTimestamp": 1571400447562,
+      "uploader": "p.andorfer@gmail.com",
+      "uploaderId": 5977,
+      "url": "https://files.transkribus.eu/Get?id=KXTNELHGTLMMLJXOPEGLRAKL&fileType=view"
+    },
+    "pageList": {
+      "pages": [
+        {
+          "created": "2019-10-18T14:07:27.836+02:00",
+          "docId": 230127,
+          "height": 3010,
+          "imageId": 6539462,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_01.JPG",
+          "indexed": true,
+          "key": "KXTNELHGTLMMLJXOPEGLRAKL",
+          "pageId": 9991226,
+          "pageNr": 1,
+          "tagsStored": "2019-10-21T10:19:09.072+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=KXTNELHGTLMMLJXOPEGLRAKL&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "RMDMDDMDRAOZZCRZLTOFAKFC",
+                "md5Sum": "",
+                "nrOfLines": 40,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 38,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 281,
+                "nrOfWordsInRegions": 244,
+                "pageId": 9991226,
+                "pageNr": 1,
+                "parentTsId": 17414849,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571645948631,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423439,
+                "url": "https://files.transkribus.eu/Get?id=RMDMDDMDRAOZZCRZLTOFAKFC",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=KXTNELHGTLMMLJXOPEGLRAKL&fileType=view",
+          "width": 1862
+        },
+        {
+          "created": "2019-10-18T14:07:29.099+02:00",
+          "docId": 230127,
+          "height": 2941,
+          "imageId": 6539463,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_02.JPG",
+          "indexed": true,
+          "key": "FRYDOZINKSLJPTXDWZEARKII",
+          "pageId": 9991227,
+          "pageNr": 2,
+          "tagsStored": "2019-10-21T10:19:13.819+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=FRYDOZINKSLJPTXDWZEARKII&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "AKPSFWIKFHAQJVNOSHYZZXZP",
+                "md5Sum": "",
+                "nrOfLines": 8,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 5,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 9,
+                "nrOfWordsInRegions": 9,
+                "pageId": 9991227,
+                "pageNr": 2,
+                "parentTsId": 17414851,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571645953378,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423466,
+                "url": "https://files.transkribus.eu/Get?id=AKPSFWIKFHAQJVNOSHYZZXZP",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=FRYDOZINKSLJPTXDWZEARKII&fileType=view",
+          "width": 1793
+        },
+        {
+          "created": "2019-10-18T14:07:30.298+02:00",
+          "docId": 230127,
+          "height": 3031,
+          "imageId": 6539466,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_03.JPG",
+          "indexed": true,
+          "key": "RWETAGTCHLFPLDUSGUYGVCAO",
+          "pageId": 9991230,
+          "pageNr": 3,
+          "tagsStored": "2019-10-21T10:19:31.641+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=RWETAGTCHLFPLDUSGUYGVCAO&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "FJRYOUNJUSFTZSVVYRXZGJEQ",
+                "md5Sum": "",
+                "nrOfLines": 30,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 29,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 231,
+                "nrOfWordsInRegions": 203,
+                "pageId": 9991230,
+                "pageNr": 3,
+                "parentTsId": 17414858,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571645971323,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423566,
+                "url": "https://files.transkribus.eu/Get?id=FJRYOUNJUSFTZSVVYRXZGJEQ",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=RWETAGTCHLFPLDUSGUYGVCAO&fileType=view",
+          "width": 1877
+        },
+        {
+          "created": "2019-10-18T14:07:31.494+02:00",
+          "docId": 230127,
+          "height": 3195,
+          "imageId": 6539470,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_04.JPG",
+          "indexed": true,
+          "key": "TWQXXIMQGNMBHCMDEKNFXEWU",
+          "pageId": 9991234,
+          "pageNr": 4,
+          "tagsStored": "2019-10-21T10:19:51.916+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=TWQXXIMQGNMBHCMDEKNFXEWU&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "BWISKOGIJUIGOUACUOXRUGKL",
+                "md5Sum": "",
+                "nrOfLines": 33,
+                "nrOfRegions": 3,
+                "nrOfTranscribedLines": 32,
+                "nrOfTranscribedRegions": 2,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 240,
+                "nrOfWordsInRegions": 210,
+                "pageId": 9991234,
+                "pageNr": 4,
+                "parentTsId": 17414861,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571645991554,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423685,
+                "url": "https://files.transkribus.eu/Get?id=BWISKOGIJUIGOUACUOXRUGKL",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=TWQXXIMQGNMBHCMDEKNFXEWU&fileType=view",
+          "width": 1966
+        },
+        {
+          "created": "2019-10-18T14:07:32.639+02:00",
+          "docId": 230127,
+          "height": 3166,
+          "imageId": 6539474,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_05.JPG",
+          "indexed": true,
+          "key": "LTMYROTBLFCNUGIZVCXOXYXA",
+          "pageId": 9991238,
+          "pageNr": 5,
+          "tagsStored": "2019-10-21T10:19:57.621+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=LTMYROTBLFCNUGIZVCXOXYXA&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "CQGMNVMMACFCVVCPOBSNQQHZ",
+                "md5Sum": "",
+                "nrOfLines": 24,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 21,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 49,
+                "nrOfWordsInRegions": 29,
+                "pageId": 9991238,
+                "pageNr": 5,
+                "parentTsId": 17414866,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571645997305,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423723,
+                "url": "https://files.transkribus.eu/Get?id=CQGMNVMMACFCVVCPOBSNQQHZ",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=LTMYROTBLFCNUGIZVCXOXYXA&fileType=view",
+          "width": 1992
+        },
+        {
+          "created": "2019-10-18T14:07:33.856+02:00",
+          "docId": 230127,
+          "height": 3159,
+          "imageId": 6539477,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_06.JPG",
+          "indexed": true,
+          "key": "ADMTYWSGSYUTULDOTHJCJPJG",
+          "pageId": 9991241,
+          "pageNr": 6,
+          "tagsStored": "2019-10-21T10:20:03.677+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=ADMTYWSGSYUTULDOTHJCJPJG&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "ABNZVQZIXMVMDXLVREJNATQJ",
+                "md5Sum": "",
+                "nrOfLines": 10,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 10,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 53,
+                "nrOfWordsInRegions": 44,
+                "pageId": 9991241,
+                "pageNr": 6,
+                "parentTsId": 17414871,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571646003337,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423762,
+                "url": "https://files.transkribus.eu/Get?id=ABNZVQZIXMVMDXLVREJNATQJ",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=ADMTYWSGSYUTULDOTHJCJPJG&fileType=view",
+          "width": 2228
+        },
+        {
+          "created": "2019-10-18T14:07:35.116+02:00",
+          "docId": 230127,
+          "height": 2952,
+          "imageId": 6539480,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_07.JPG",
+          "indexed": true,
+          "key": "AOJVYPCPBEWORDTTQOMJOBQR",
+          "pageId": 9991244,
+          "pageNr": 7,
+          "tagsStored": "2019-10-21T10:20:18.365+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=AOJVYPCPBEWORDTTQOMJOBQR&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "MXXHYERQAEGLRLOABZSPONOX",
+                "md5Sum": "",
+                "nrOfLines": 40,
+                "nrOfRegions": 2,
+                "nrOfTranscribedLines": 32,
+                "nrOfTranscribedRegions": 2,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 47,
+                "nrOfWordsInRegions": 22,
+                "pageId": 9991244,
+                "pageNr": 7,
+                "parentTsId": 17414876,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571646018067,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423854,
+                "url": "https://files.transkribus.eu/Get?id=MXXHYERQAEGLRLOABZSPONOX",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=AOJVYPCPBEWORDTTQOMJOBQR&fileType=view",
+          "width": 1902
+        },
+        {
+          "created": "2019-10-18T14:07:36.384+02:00",
+          "docId": 230127,
+          "height": 3114,
+          "imageId": 6539484,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_08.JPG",
+          "indexed": true,
+          "key": "YVDKDNPJBPDMWBSSAWKQAEQY",
+          "pageId": 9991248,
+          "pageNr": 8,
+          "tagsStored": "2019-10-21T10:20:34.14+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=YVDKDNPJBPDMWBSSAWKQAEQY&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "NMZUDJBBIHCIRRIKPRPGJPYF",
+                "md5Sum": "",
+                "nrOfLines": 31,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 27,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 38,
+                "nrOfWordsInRegions": 18,
+                "pageId": 9991248,
+                "pageNr": 8,
+                "parentTsId": 17414880,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571646033824,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17423955,
+                "url": "https://files.transkribus.eu/Get?id=NMZUDJBBIHCIRRIKPRPGJPYF",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=YVDKDNPJBPDMWBSSAWKQAEQY&fileType=view",
+          "width": 1980
+        },
+        {
+          "created": "2019-10-18T14:07:37.471+02:00",
+          "docId": 230127,
+          "height": 2767,
+          "imageId": 6539488,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_09.JPG",
+          "indexed": true,
+          "key": "CNPOKAGCDNVKONZGFCCHMZMQ",
+          "pageId": 9991252,
+          "pageNr": 9,
+          "tagsStored": "2019-10-21T10:20:53.18+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=CNPOKAGCDNVKONZGFCCHMZMQ&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "CPXWYAHBYJYZWPLGZNJHSSXF",
+                "md5Sum": "",
+                "nrOfLines": 33,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 33,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 236,
+                "nrOfWordsInRegions": 204,
+                "pageId": 9991252,
+                "pageNr": 9,
+                "parentTsId": 17414885,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571646052852,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17424078,
+                "url": "https://files.transkribus.eu/Get?id=CPXWYAHBYJYZWPLGZNJHSSXF",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=CNPOKAGCDNVKONZGFCCHMZMQ&fileType=view",
+          "width": 1751
+        },
+        {
+          "created": "2019-10-18T14:07:38.889+02:00",
+          "docId": 230127,
+          "height": 2873,
+          "imageId": 6539492,
+          "imageVersions": {
+            "imageVersions": []
+          },
+          "imgFileName": "2466_WSTLA_MD_1691_1919_10.JPG",
+          "indexed": true,
+          "key": "CWOCGGTNLSDMVGNLWIOCFCJU",
+          "pageId": 9991256,
+          "pageNr": 10,
+          "tagsStored": "2019-10-21T10:21:03.312+02:00",
+          "thumbUrl": "https://files.transkribus.eu/Get?id=CWOCGGTNLSDMVGNLWIOCFCJU&fileType=thumb",
+          "tsList": {
+            "transcripts": [
+              {
+                "docId": 230127,
+                "jobId": 740425,
+                "key": "VVEKNQNPNNOOQTIGTUUTRGWD",
+                "md5Sum": "",
+                "nrOfLines": 35,
+                "nrOfRegions": 1,
+                "nrOfTranscribedLines": 32,
+                "nrOfTranscribedRegions": 1,
+                "nrOfTranscribedWords": 0,
+                "nrOfWords": 0,
+                "nrOfWordsInLines": 106,
+                "nrOfWordsInRegions": 76,
+                "pageId": 9991256,
+                "pageNr": 10,
+                "parentTsId": 17414889,
+                "status": "IN_PROGRESS",
+                "timestamp": 1571646062878,
+                "toolName": "CITlab HTR: ONB_Newseye_GT_M1+",
+                "tsId": 17424142,
+                "url": "https://files.transkribus.eu/Get?id=VVEKNQNPNNOOQTIGTUUTRGWD",
+                "userId": 5977,
+                "userName": "p.andorfer@gmail.com"
+              }
+            ]
+          },
+          "url": "https://files.transkribus.eu/Get?id=CWOCGGTNLSDMVGNLWIOCFCJU&fileType=view",
+          "width": 1844
+        }
+      ]
+    }
+  }

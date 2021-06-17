@@ -1,2 +1,3 @@
 include transkribus2arche/additional_md_sample.ttl
 include transkribus2arche/config_sample.json
+include transkribus2arche/trp.json

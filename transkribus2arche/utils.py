@@ -81,7 +81,7 @@ def get_md_dict(trans_doc, path_to_config):
             try:
                 obj = datetime.fromtimestamp(obj)
             except ValueError:
-                obj = datetime.fromtimestamp(obj / 1000)  
+                obj = datetime.fromtimestamp(obj / 1000)
         if 'hasExtend' in key:
             obj = config['arche_extend_pattern'].format(obj)
         item[key] = f"{obj}"
@@ -185,7 +185,7 @@ def make_rdf(path_to_config):
                         ACDH_NS.hasNonLinkedIdentifier,
                         Literal(
                             f"{d}: {p[d]}", lang="und")
-                        )
+                    )
                 )
             g = g + p_g
             g = g + xml_g
