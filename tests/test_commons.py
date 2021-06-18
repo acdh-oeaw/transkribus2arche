@@ -12,7 +12,9 @@ g.add(
 TRIPLES = [
     ["hasFormat", "image/jpeg", "literal_no_lang"],
     ["hasCategory", "https://vocabs.acdh.oeaw.ac.at/archecategory/image", "uri"],
-    ["hasTitle", "Hansi4ever", "literal", "und"]
+    ["hasTitle", "Hansi4ever", "literal", "und"],
+    ["hasCoverageStartDate", "1900-01-01", "date"],
+    ["hasPid", "http://hdl.handle.net/whtever/com", "literal_as_uri"]
 ]
 DATA = [
     {
@@ -51,4 +53,8 @@ class TestCommons(unittest.TestCase):
         self.assertTrue(len(g) == 2)
         for x in TRIPLES:
             add_triple(g, subj, x)
-        self.assertTrue(len(g) == 4)
+        g_len = 1 + len(TRIPLES)
+        self.assertTrue(len(g) == g_len)
+        self.assertFalse('http://hdl.handle' in f"{g.serialize()}")
+        new_g = add_triple(g, subj, TRIPLES[0])
+        self.assertIsInstance(new_g, Graph)

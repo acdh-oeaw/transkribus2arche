@@ -19,34 +19,7 @@ def add_triple(g, sub, triple):
             (
                 sub,
                 ACDH_NS[triple[0]],
-                URIRef(triple[1])
-            )
-        )
-    elif tr_type == "literal_no_lang":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(triple[1])
-            )
-        )
-    elif tr_type == "literal":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(
-                    triple[1],
-                    lang=triple[3]
-                )
-            )
-        )
-    elif tr_type == "literal_as_uri":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(URIRef(triple[1]))
+                san_uri_ref(triple[1])
             )
         )
     elif tr_type == "date":
@@ -57,6 +30,33 @@ def add_triple(g, sub, triple):
                 Literal(
                     triple[1],
                     datatype=XSD.date
+                )
+            )
+        )
+    elif tr_type == "literal_no_lang":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(triple[1])
+            )
+        )
+    elif tr_type == "literal_as_uri":
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(san_uri_ref(triple[1]))
+            )
+        )
+    else:
+        g.add(
+            (
+                sub,
+                ACDH_NS[triple[0]],
+                Literal(
+                    triple[1],
+                    lang=triple[3]
                 )
             )
         )
