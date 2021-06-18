@@ -1,10 +1,9 @@
 import glob
 import json
 import os
-from datetime import datetime
 from rdflib import Graph, URIRef, Literal, XSD, RDF
 
-from .commons import ACDH_NS, add_triple
+from .commons import ACDH_NS, add_triple, fix_date
 
 
 def read_json(path_to_file):
@@ -28,10 +27,7 @@ def get_md_dict(trans_doc, path_to_config):
     for key, value in mapping.items():
         obj = md.get(value)
         if 'Date' in key and obj is not None:
-            try:
-                obj = datetime.fromtimestamp(obj)
-            except ValueError:
-                obj = datetime.fromtimestamp(obj / 1000)
+            obj = fix_date(obj)
         if 'hasExtend' in key:
             obj = config['arche_extend_pattern'].format(obj)
         item[key] = f"{obj}"
@@ -142,8 +138,7 @@ def make_rdf(path_to_config, out_dir):
                             f"{d}: {p[d]}", lang="und")
                     )
                 )
-            g = g + p_g
-            g = g + xml_g
+            g = g + p_g + xml_g
         save_path = os.path.join(out_dir, f"{item['docId']}.ttl")
         with open(save_path, 'w') as f:
             print(g.serialize(format='turtle').decode('UTF-8'), file=f)
