@@ -137,7 +137,7 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-/env
-
+# Custom things
 *.ipynb
 out.ttl
+/out

@@ -1,5 +1,6 @@
 import glob
 import json
+import os
 from datetime import datetime
 from rdflib import Graph, URIRef, Literal, XSD, RDF
 
@@ -90,7 +91,12 @@ def get_md_dict(trans_doc, path_to_config):
     return item
 
 
-def make_rdf(path_to_config):
+def make_rdf(path_to_config, out_dir):
+    try:
+        os.makedirs(out_dir)
+        print(f"Directory '{out_dir}' created")
+    except FileExistsError:
+        print(f"Directory '{out_dir}' alredy exists")
     config = read_json(path_to_config)
     global_constants = config['global_constants']
     img_constants = config['img_constants']
@@ -98,12 +104,12 @@ def make_rdf(path_to_config):
     base_lang = config['arche_base_lang']
     base_url = config['arche_base_url']
     replace_pattern = config['img_xml_pattern']
-    g = Graph()
-    g.parse(config['additional_md'], format="ttl")
-    top_col_sub = URIRef(config['arche_base_url'])
-    for triple in global_constants:
-        add_triple(g, top_col_sub, triple)
     for x in list_docs(path_to_config):
+        g = Graph()
+        g.parse(config['additional_md'], format="ttl")
+        top_col_sub = URIRef(config['arche_base_url'])
+        for triple in global_constants:
+            add_triple(g, top_col_sub, triple)
         item = get_md_dict(x, path_to_config)
         sub = URIRef(item['hasIdentifier'])
         col_g = Graph()
@@ -189,6 +195,7 @@ def make_rdf(path_to_config):
                 )
             g = g + p_g
             g = g + xml_g
-        with open(f"{item['docId']}.tll", 'w') as f:
+        save_path = os.path.join(out_dir, f"{item['docId']}.ttl")
+        with open(save_path, 'w') as f:
             print(g.serialize(format='turtle').decode('UTF-8'), file=f)
     return g
