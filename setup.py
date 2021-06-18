@@ -22,6 +22,7 @@ setuptools.setup(
     include_package_data=True,
     install_requires=[
         'acdh-arche-assets==3.2.0',
-        'rdflib==5.0.0',
+        'python-dateutil',
+        'rdflib',
     ]
 )
