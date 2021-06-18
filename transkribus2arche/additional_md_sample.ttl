@@ -7,3 +7,6 @@
 
 <https://id.acdh.oeaw.ac.at/vhelfert> a acdh:Person ;
     acdh:hasTitle "Veronika Helfert"@de .
+
+<https://d-nb.info/gnd/2060831-7> a acdh:Organisation ;
+    acdh:hasTitle "Wiener Stadt- und Landesarcheiv"@de .
