@@ -4,58 +4,7 @@ import os
 from datetime import datetime
 from rdflib import Graph, URIRef, Literal, XSD, RDF
 
-from .config import ACDH_NS
-
-
-def add_triple(g, sub, triple):
-    tr_type = triple[2]
-    if tr_type == "uri":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                URIRef(triple[1])
-            )
-        )
-    elif tr_type == "literal_no_lang":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(triple[1])
-            )
-        )
-    elif tr_type == "literal":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(
-                    triple[1],
-                    lang=triple[3]
-                )
-            )
-        )
-    elif tr_type == "literal_as_uri":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(URIRef(triple[1]))
-            )
-        )
-    elif tr_type == "date":
-        g.add(
-            (
-                sub,
-                ACDH_NS[triple[0]],
-                Literal(
-                    triple[1],
-                    datatype=XSD.date
-                )
-            )
-        )
-    return g
+from .commons import ACDH_NS, add_triple
 
 
 def read_json(path_to_file):

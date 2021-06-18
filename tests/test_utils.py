@@ -7,7 +7,7 @@ path_to_config = './transkribus2arche/config_sample.json'
 trans_doc = './transkribus2arche/trp.json'
 
 
-class TestUtirls(unittest.TestCase):
+class TestUtils(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
