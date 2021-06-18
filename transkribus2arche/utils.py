@@ -163,7 +163,7 @@ def make_rdf(path_to_config, out_dir):
             for triple in global_constants:
                 add_triple(p_g, p_subj, triple)
             p_g.add(
-                (p_subj, RDF.type, ACDH_NS.Image)
+                (p_subj, RDF.type, ACDH_NS.Resource)
             )
             p_g.add(
                 (p_subj, ACDH_NS.isPartOf, sub)

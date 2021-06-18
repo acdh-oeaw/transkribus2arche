@@ -29,7 +29,8 @@
     "img_constants":
         [
             ["hasFormat", "image/jpeg", "literal_no_lang"],
-            ["hasDigitisingAgent", "https://id.acdh.oeaw.ac.at/vhelfert", "uri"]
+            ["hasDigitisingAgent", "https://id.acdh.oeaw.ac.at/vhelfert", "uri"],
+            ["hasCategory", "https://vocabs.acdh.oeaw.ac.at/archecategory/image", "uri"]
         ],
     "xml_constants":
         [
