@@ -4,10 +4,10 @@ transkribus2arche package
 Submodules
 ----------
 
-transkribus2arche.config module
--------------------------------
+transkribus2arche.commons module
+--------------------------------
 
-.. automodule:: transkribus2arche.config
+.. automodule:: transkribus2arche.commons
    :members:
    :undoc-members:
    :show-inheritance:
